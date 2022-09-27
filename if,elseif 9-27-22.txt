@@ -1,0 +1,193 @@
+WAP to accept withdraw amount and print number of notes.
+
+            500  200 100
+
+sample input:  400
+             output:  200 -  2
+
+Sample input:  1000  
+            output:   500 -2
+
+Sample input:  800
+             output:
+                          500- 1
+                          200 -1
+                          100 -1
+
+Hints:  
+
+    1. check weather amount is multiples of 100 or not.  {100,200,300....1000}  .  else display error message.
+    2. 1000/500  --    1000/200  ---   1000/100 --
+
+begin
+   numeric amount,five,two,one
+   Display "Enter withdraw amount"
+   input amount
+   if amount%100==0:                       // 1800
+        if amount>=500:
+                five=amount/500
+                 amount=amount-(five*500)
+                 Display "500 rupees notes are: "+five
+   
+         if amount>=200:
+                two=amount/200
+                 amount=amount-(two*200)
+                 Display "200 rupees notes are: "+two
+
+         if amount>=100:
+                one=amount/100
+                 Display "100 rupees notes are: "+one
+                 
+
+   else:
+       display "amount should be multiples of 100 only"
+
+
+ 1. WAP to accept 3 subjects marks from learners (Project score + External score + internal score)
+        --> check the learner got passed in 3 subjects or not.  [ pass marks is 50]
+        --> if learner is got passed in 3 subjects then find the total score.
+                total_score=  70% from project + 20% from external + 10% from internals
+        --> based on total score print grade.
+                    90+   -- A grade
+                   70-90 -- B grade
+                   50-70 -- C grade
+        --> if student got failed in subjects, print failed subject name along with score.
+
+begin
+  numeric project,external,internal,toatal
+  Display  "enter the project, external,and internal score:"
+  input project,external,internal
+  if(project>=50 && external>=50 && internal>=50)
+begin
+total=(70*project)/100 + (20*external)/100 + (10*internal)/100;)
+end
+if (total>=90)
+begin
+Display "A garade"
+end
+else if (total>=70)
+begin
+Display "B garade"
+end
+else 
+begin
+Display "C garade"
+end
+end
+if(project<=50 && external<=50 && internal<=50)
+begin
+Display "failed in project:" project;
+Display "failed in external:" external;
+Display "failed in internal:" internal;
+end
+end
+
+3. WAP to print 1-n numbers
+
+
+   begin
+     numeric num,i
+     Display "enter any number:";
+     input num 
+        for(i=1;i<=num;i++) 
+        begin
+             Display i
+          end
+          end
+
+
+    4.  WAP to print n-1 numbers
+
+    begin
+       numeric i, n
+       Display "enter any number:";
+       input n 
+         for(i=n;i>0;i--) 
+        begin
+             Display i
+          end
+          end
+
+
+
+    5. WAP to accept start and stop values and print between values
+begin
+numeric start, stop
+Display "enter the values:"; //1-100
+input start
+Display "enter start value:";
+input stop
+Display "enter stop value"
+end
+
+
+    6. WAP to print even numbers between 1-n.
+begin
+numeric num, i
+Display "enter any number:";
+input num
+for (i=1;i<=num;i++)
+begin
+if(i%2==0)
+begin
+Display "i";
+end 
+end
+end
+
+7. WAP to print odd numbers between 1-n.
+
+begin
+numeric num, i
+Display "enter any number:";
+input num
+for (i=1;i<=num;i++)
+begin
+if(i%2!=0)
+begin
+Display "i";
+end 
+end
+end
+
+8. WAP to print sum of 1-n.
+begin
+numeric i,num, sum=0
+Display "enter any number :";
+input num
+for(i=1; i>=num;i++)
+begin
+sum=sum+i;
+end
+Display " sum of first values:" +sum;
+end
+
+
+    9. WAP to print sum of even numbers and sum of odd numbers between 1-n.
+begin
+numeric n, sumeven=0, sumodd=0 
+Display "enter any number:";
+input n
+for (i=1;i<=num;i++)
+begin
+if(i%2==0)
+begin
+sumeven +=i;
+Display "sum of even number";
+end 
+else
+begin
+sumodd +=i;
+Display "sum of odd number";
+end
+end
+end
+ 
+
+
+
+
+
+    
+    
+
